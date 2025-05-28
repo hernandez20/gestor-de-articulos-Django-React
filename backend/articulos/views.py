@@ -41,3 +41,22 @@ class ArticuloViewSet(viewsets.ModelViewSet):
             return Response({'message': 'Importación exitosa.'}, status=status.HTTP_200_OK)
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+
+# viewsets.ModelViewSet ofrece operaciones escenciales CRUD
+# El decorador @action define acciones personalizadas fuera del CRUD
+
+# ArticuloViewSet al Heredar de ModelViewSet crea automaticamente los endpoints básicos como get y edit
+# Usamos el ArticuloSerializer para convertir los resultados a JSON
+
+''' 
+Actualmente las operaciones de importación y exportación de archivos .xlsx se ejecutan de forma síncrona. No Bloquean el hilo del request
+Pero de ser Necesario el procesamiento en segundo plano tendría que:
+
+* Integrar un broker (intermediario) de mensajes, como Redis e incluirlo ese servicio en el docker-compose.yml
+
+* Levantar un worker (ejecuta las tareas) Celery que ejecute las tareas asincrónicas.
+
+* Configurar colas, reintentos y (opcionalmente) monitoreo.
+
+'''
