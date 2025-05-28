@@ -3,6 +3,7 @@ import type { Article } from '../types';
 
 const API_URL = 'http://localhost:8000/articulos/';
 
+
 const handleError = (error: any) => {
   if (axios.isAxiosError(error)) {
     console.error('Axios error:', error.response?.data || error.message);

@@ -36,7 +36,8 @@ cd gestor-de-articulos-django-react
 
 2 Construir y levantar los contenedores
 
-docker-compose up --build
+docker-compose up --build // Para Desarrollo
+docker-compose -f docker-compose.yml up --build // Con el cliente Compilado 
 
 Esto levanta:
 
