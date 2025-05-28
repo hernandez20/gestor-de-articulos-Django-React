@@ -93,19 +93,22 @@ backend/env/
 *.env, *.sqlite3
 
 db_data/ (volumen de MySQL)
-## API Reference
+
+```
+
+### Referencia de la API
 
 #### Obtener todos los artículos
-GET /articulos/
+GET `/articulos/`
 
 #Editar un artículo por ID
-POST /articulos/{id}/
+POST `/articulos/{id}/`
 
 #Exportar artículos a Excel
-GET /articulos/exportar_excel/
+GET `/articulos/exportar_excel/`
 
 #Importar artículos desde Excel
-POST  /articulos/importar_excel/
+POST  `/articulos/importar_excel/`
 
 Content-Type: multipart/form-data
 Body: file=[archivo.xlsx]
