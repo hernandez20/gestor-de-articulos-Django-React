@@ -1,0 +1,51 @@
+{
+  "login": {
+    "title": "Login",
+    "sign_in":"Sign in",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Log In",
+    "no_account": "Don't have an account?",
+    "register_here": "Register here"
+  },
+  "register": {
+    "title": "Register",
+    "submit": "Sign Up",
+    "have_account": "Already have an account?",
+    "login_here": "Log in here"
+  },
+  "mainTitle": "Weather App",
+  "search": {
+    "title": "Search by City",
+    "placeholder": "Search city..."
+  },
+  "view": {
+    "table": "Table View",
+    "detailed": "Detailed View"
+  },
+  "table": {
+    "city": "City",
+    "country": "Country",
+    "temperature": "Temperature",
+    "condition": "Weather",
+    "localtime": "Local Time",
+    "no_data": "No data available."
+  },
+  "favorites": {
+    "title": "Favorite Cities",
+    "actions": "Actions",
+    "empty": "No favorites."
+  },
+
+    "home": {
+    "logout": "Log out",
+
+    "title": "Weather App",
+    "search_title": "Search by City",
+    "table_view": "Table View",
+    "detail_view": "Detailed View",
+    "favorite_cities": "Favorite Cities"
+  }
+
+
+}
