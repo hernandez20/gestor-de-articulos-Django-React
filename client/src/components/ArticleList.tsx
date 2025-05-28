@@ -46,7 +46,6 @@ const ArticleList = ({ onEdit, refreshTrigger }: Props) => {
     </button>
   </div>
 
-  {/* Listado con altura máxima y scroll */}
   <ul className="divide-y divide-gray-200 max-h-80 overflow-y-auto pr-2">
     {articles.map(article => (
       <li key={article.id} className="py-4 flex justify-between items-center">
