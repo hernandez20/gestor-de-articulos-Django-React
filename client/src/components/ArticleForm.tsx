@@ -59,9 +59,9 @@ const ArticleForm = ({ articleToEdit, onFinish }: Props) => {
       />
       <button
         type="submit"
-        className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
+        className="w-full  h-12 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
       >
-        {articleToEdit ? 'Actualizar' : 'Crear'}
+        {articleToEdit ? 'Actualizar' : 'Crear Artículo'}
       </button>
     </form>
 

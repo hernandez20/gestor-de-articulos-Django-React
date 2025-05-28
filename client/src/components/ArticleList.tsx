@@ -1,6 +1,8 @@
 import  { useEffect, useState } from 'react';
 import { getArticles, deleteArticle, exportArticles } from '../api/articlesAPI';
 import type { Article } from '../types';
+import { MdEdit ,MdDelete } from "react-icons/md";
+import { FaFileExport } from "react-icons/fa";
 
 interface Props {
   onEdit: (article: Article) => void;
@@ -42,7 +44,12 @@ const ArticleList = ({ onEdit, refreshTrigger }: Props) => {
       onClick={handleExport}
       className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition duration-300"
     >
-      Exportar Excel
+
+      <div className='flex items-center  gap-x-2 h-12'>
+     <small>Exportar</small> <FaFileExport />
+
+      </div>
+
     </button>
   </div>
 
@@ -59,13 +66,15 @@ const ArticleList = ({ onEdit, refreshTrigger }: Props) => {
             onClick={() => onEdit(article)}
             className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
           >
-            Editar
+            <MdEdit />
+
           </button>
           <button
             onClick={() => handleDelete(article.id!)}
             className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
           >
-            Eliminar
+          <MdDelete />
+
           </button>
         </div>
       </li>
