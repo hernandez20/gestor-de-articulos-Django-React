@@ -42,20 +42,25 @@ docker-compose -f docker-compose.yml up --build // Con el cliente Compilado
 Esto levanta:
 
 🌐 Frontend en http://localhost:3000
-
 🔌 Backend Django en http://localhost:8000
-
 🐬 MySQL como base de datos en el puerto 3306
 
-Crear superusuario para /admin
+
+Logs que comunican un buen Inicio:
+
+`[Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.42'  socket: '/var/run/mysqld/mysqld.sock'  `port: 3306  MySQL Community Server - GPL.`
+`INFO  Accepting connections at http://localhost:3000`
+`Variables de entorno encontradas. Usando MySQL.`
+
+
+Crear superusuario para /admin 
 docker-compose exec backend python manage.py createsuperuser
 
 
 📤 Exportar artículos a Excel
+
 Ve a la sección "Lista de Artículos".
-
 Haz clic en el botón "Exportar Excel".
-
 El navegador descargará un archivo articulos.xlsx con todos los artículos actuales.
 
 📥 Importar artículos desde Excel
@@ -70,30 +75,17 @@ Prepara un archivo Excel con los siguientes encabezados:
 En la interfaz, utiliza el componente "Importar Excel":
 
 Haz clic en "Seleccionar archivo"
-
 Luego en "Importar Excel"
-
 Los artículos se importarán y actualizarán según el codigo.
 
-📁 Estructura del proyecto
 
+📁 Estructura del proyecto
 .
 ├── backend/         
 ├── client/          
 ├── docker-compose.yml
 ├── README.md
 
-
- .gitignore relevante
-client/node_modules/
-
-backend/__pycache__/
-
-backend/env/
-
-*.env, *.sqlite3
-
-db_data/ (volumen de MySQL)
 
 ```
 

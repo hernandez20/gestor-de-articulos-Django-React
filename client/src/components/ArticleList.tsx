@@ -54,7 +54,7 @@ const ArticleList = ({ onEdit, refreshTrigger }: Props) => {
   </div>
 
   <ul className="divide-y divide-gray-200 max-h-80 overflow-y-auto pr-2">
-    {articles.map(article => (
+    {articles.map((article: Article) => (
       <li key={article.id} className="py-4 flex justify-between items-center">
         <div>
           <p className="font-medium text-gray-800">{article.codigo}</p>

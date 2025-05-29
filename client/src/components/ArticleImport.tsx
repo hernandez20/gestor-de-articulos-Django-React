@@ -19,18 +19,16 @@ const ArticleImport = ({ onFinish }: Props) => {
   };
 
   return (
-  <form
+<form
   onSubmit={handleSubmit}
   className="w-full bg-white p-6 rounded-lg space-y-4"
 >
-
-
-  
+  {/* Botón para seleccionar archivo */}
   <label
     htmlFor="file-upload"
-    className="inline-flex justify-center items-center gap-2 cursor-pointer w-full  bg-gray-400 text-black text-sm px-4 py-2 rounded hover:bg-gray-300 font-semibold "
+    className="inline-flex justify-center items-center gap-2 cursor-pointer w-full bg-gray-400 text-black text-sm px-4 py-2 rounded hover:bg-gray-300 font-semibold"
   >
-    <FaFileUpload className='text-white'/>
+    <FaFileUpload className="text-white" />
   </label>
 
   <input
@@ -42,14 +40,15 @@ const ArticleImport = ({ onFinish }: Props) => {
     className="hidden"
   />
 
+  {/* Botón de envío */}
   <button
     type="submit"
-    className="w-full h-12 bg-blue-600 text-white py-2 px-4 rounded hover:bg-indigo-700 transition duration-300"
+    disabled={!file}
+    className={`w-full h-12 py-2 px-4 rounded transition duration-300 flex items-center justify-center gap-2
+      ${file ? 'bg-blue-600 text-white hover:bg-indigo-700' : 'bg-gray-300 text-gray-500 cursor-not-allowed'}`}
   >
-    <div className="flex items-center justify-center gap-2">
-      <small>Importar Excel</small>
-      <FaFileImport />
-    </div>
+    <small>Importar Excel</small> 
+    <FaFileImport />
   </button>
 </form>
 

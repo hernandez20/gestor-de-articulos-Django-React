@@ -1,7 +1,7 @@
 import axios, { type AxiosResponse } from 'axios';
 import type { Article } from '../types';
 
-const API_URL = 'http://localhost:8000/articulos/';
+const API_URL = import.meta.env.VITE_API_URL ; 
 
 
 const handleError = (error: any) => {

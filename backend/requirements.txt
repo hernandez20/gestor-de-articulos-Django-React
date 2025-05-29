@@ -4,4 +4,6 @@ mysqlclient
 pandas
 openpyxl
 django-cors-headers
+python-dotenv
+
 
