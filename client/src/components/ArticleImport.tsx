@@ -20,12 +20,13 @@ const ArticleImport = ({ onFinish }: Props) => {
 
   return (
 
+<div>
+<p className='text-xl font-semibold'>Sube un Archivo</p>
 
 <form
   onSubmit={handleSubmit}
   className="w-full bg-white p-6 rounded-lg space-y-4"
 >
-  {/* Botón para seleccionar archivo */}
   <label
     htmlFor="file-upload"
     className="inline-flex justify-center items-center gap-2 cursor-pointer w-full bg-gray-400 text-black text-sm px-4 py-2 rounded hover:bg-gray-300 font-semibold"
@@ -42,7 +43,6 @@ const ArticleImport = ({ onFinish }: Props) => {
     className="hidden"
   />
 
-  {/* Botón de envío */}
   <button
     type="submit"
     disabled={!file}
@@ -53,7 +53,7 @@ const ArticleImport = ({ onFinish }: Props) => {
     <FaFileImport />
   </button>
 </form>
-
+</div>
   );
 };
 
